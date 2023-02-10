@@ -14,3 +14,4 @@ class RandomWalk:
 
     def fill_walk(self):
         """Calculate all the points in the walk."""
+        
