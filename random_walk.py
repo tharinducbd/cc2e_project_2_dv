@@ -12,6 +12,8 @@ class RandomWalk:
         self.x_values = [0]
         self.y_values = [0]
 
+        print("Randowm walk: Initialization Successful!")
+
     def fill_walk(self):
         """Calculate all the points in the walk."""
 
