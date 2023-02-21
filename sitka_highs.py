@@ -17,7 +17,7 @@ with open(filename) as f:
 
 # Plot the high temperaturs.
 plt.style.use('dark_background')
-fig, ax = plt.subplots(figsize=(10,6))
+fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(highs, c='red')
 
 # Format plot.
