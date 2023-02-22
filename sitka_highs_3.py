@@ -21,8 +21,9 @@ with open(filename) as f:
 # Plot the high and low temperaturs.
 plt.style.use('dark_background')
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(dates, highs, c='red')
-ax.plot(dates, lows, c='yellow')
+ax.plot(dates, highs, c='red', alpha=0.5)
+ax.plot(dates, lows, c='blue', alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor='yellow', alpha=0.2)
 
 # Format plot.
 ax.set_title("Daily high & low temps - 2018", fontsize=24)
