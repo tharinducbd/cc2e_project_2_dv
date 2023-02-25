@@ -34,5 +34,5 @@ data = [Scattergeo(lon=lons, lat=lats)]
 my_layout = Layout(title='Global Earthquakes')
 
 fig = {'data': data, 'layout': my_layout}
-offline.plot(fig,
-             filename='cc2e_codes/project_2/data/global_earthquakes.html')
+output_file = 'cc2e_codes/project_2/data/global_earthquakes.html'
+offline.plot(fig, filename=output_file)
