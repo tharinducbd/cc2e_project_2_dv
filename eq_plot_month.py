@@ -4,7 +4,7 @@ from plotly import offline
 from plotly.graph_objs import Scattergeo, Layout
 
 # Explore the structure of the data.
-filename = 'cc2e_codes/project_2/data/eq_data_1_day_m1.json'
+filename = 'cc2e_codes/project_2/data/eq_data_30_day_m1.json'
 with open(filename) as f:
     all_eq_data = json.load(f)
 
@@ -46,6 +46,6 @@ data = [{
 my_layout = Layout(title='Global Earthquakes')
 
 fig = {'data': data, 'layout': my_layout}
-output_file = 'cc2e_codes/project_2/data/global_earthquakes.html'
+output_file = 'cc2e_codes/project_2/data/global_earthquakes_30_day.html'
 
 offline.plot(fig, filename=output_file)
