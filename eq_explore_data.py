@@ -33,10 +33,19 @@ print(lats[:5])
 data = [{
     'type': 'scattergeo',
     'lon': lons,
-    'lat': lats
+    'lat': lats,
+    'marker': {
+        'size': [5*mag for mag in mags],
+        'color': mags,
+        'colorscale': 'Viridis',
+        'reversescale': True,
+        'colorbar': {'title': 'Magnitude'},
+    },
 }]
+
 my_layout = Layout(title='Global Earthquakes')
 
 fig = {'data': data, 'layout': my_layout}
 output_file = 'cc2e_codes/project_2/data/global_earthquakes.html'
+
 offline.plot(fig, filename=output_file)
