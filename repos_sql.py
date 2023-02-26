@@ -7,7 +7,6 @@ url = ('https://api.github.com/search/repositories?'
 headers = {'Accept': 'application/vnd.github.v3+json'}
 
 r = requests.get(url, headers=headers)
-
 print(f"Status Code: {r.status_code}")
 
 # Store API response in a variable
