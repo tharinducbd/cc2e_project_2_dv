@@ -27,7 +27,7 @@ repo_dict = repo_dicts[0]
 # for key in sorted(repo_dict.keys()):
 #     print(key, end=' | ')
 
-print("\nSelected info on first repo")
+print("\nSelected info on first repository: ")
 print(f"Name: {repo_dict['name']}")
 print(f"Owner: {repo_dict['owner']['login']}")
 print(f"Stars: {repo_dict['stargazers_count']}")
