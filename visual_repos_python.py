@@ -13,5 +13,25 @@ print(f"Status Code: {r.status_code}")
 
 # Process Results
 response_dict = r.json()
-repo_dict = response_dict['items']
+repo_dicts = response_dict['items']
+repo_names, stars = ([], [])
 
+for repo_dict in repo_dicts:
+    repo_names.append(repo_dict['name'])
+    stars.append(repo_dict['stargazers_count'])
+
+# Make visualization.
+data = [{
+    'type': 'bar',
+    'x': repo_names,
+    'y': stars,
+    }]
+
+my_layout = {
+    'title': 'Most-starred Python Projects on GitHub',
+    'xaxis': {'title': 'Repository',},
+    'yaxis': {'title': 'Stars',},
+}
+
+fig = {'data': data, 'layout': my_layout}
+offline.plot(fig, filename='python_repos.html')
