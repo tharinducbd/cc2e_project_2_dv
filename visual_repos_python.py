@@ -17,7 +17,7 @@ repo_dicts = response_dict['items']
 repo_links, stars, labels = [], [], []
 
 for repo_dict in repo_dicts:
-    repo_name= repo_dict['name']
+    repo_name = repo_dict['name']
     repo_url = repo_dict['html_url']
     repo_link = f"<a href='{repo_url}'>{repo_name}"
     repo_links.append(repo_link)
