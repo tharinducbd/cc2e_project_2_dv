@@ -56,7 +56,7 @@ my_layout = {
         'titlefont': {'size': 24},
         'tickfont': {'size': 14},
         },
-}
+    }
 
 fig = {'data': data, 'layout': my_layout}
 offline.plot(fig, filename='python_repos.html')
