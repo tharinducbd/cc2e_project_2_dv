@@ -29,7 +29,8 @@ for index, submission_id in enumerate(submission_ids[:30]):
 
     submission_dicts.append(submission_dict)
 
-submission_dicts = sorted(submission_dicts, key=itemgetter('comments'),
+submission_dicts = sorted(submission_dicts,
+                          key=itemgetter('comments', 'score'),
                           reverse=True)
 
 for submission_dict in submission_dicts:
